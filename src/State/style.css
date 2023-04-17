@@ -1,0 +1,45 @@
+
+
+body{
+    background: url(../../public/img/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(28, 19, 19);
+}
+
+.list {
+    padding-top: 110px;
+}
+.list .item .imgPerson{
+    width: 250px;
+}
+
+.content{
+    position: relative;
+    width: 250px;
+}
+
+.content .imgGlasses{
+    position: absolute;
+    top: 80px;
+    left: 65px;
+    width: 120px;
+}
+.content .imgGlasses img{
+    width: 100%;
+}
+.content .title{
+    background-color: rgb(255, 166, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* .btnGlasses button{
+    border: none;
+    background-color: #f8f9fa;
+} */
+.btnGlasses img{
+    width: 150px;
+}
+
