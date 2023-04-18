@@ -3,9 +3,11 @@ import { arrProduct } from '../assets/data/data'
 
 export default class Body_RenderWidthMap extends Component {
 
-    
+
     state = {
-        srcGlasses: './img/v1.png'
+        srcGlasses: './img/v1.png',
+        nameGlasses: 'GUCCI G8850U',
+        descGlasses: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip._1',
     }
 
     handleChangeGlasses = (url, name, desc) => {
@@ -19,12 +21,12 @@ export default class Body_RenderWidthMap extends Component {
     renderMapBtn = () => {
         let arrJSXBtn = arrProduct.map((item) => {
             return <div className="col-6 col-md-4 col-lg-3 col-xl-2 pt-2" key={item.id}>
-                        <button onClick={() => {
-                            this.handleChangeGlasses(item.url, item.name, item.desc)
-                        }}>
-                            <img src={item.url} alt="..." />
-                        </button>
-                    </div>
+                <button onClick={() => {
+                    this.handleChangeGlasses(item.url, item.name, item.desc)
+                }}>
+                    <img src={item.url} alt="..." />
+                </button>
+            </div>
         })
 
         return arrJSXBtn
@@ -36,6 +38,11 @@ export default class Body_RenderWidthMap extends Component {
             <div className='container '>
                 <div className="row text-center list">
                     <div className="col-12 col-sm-6 col-lg-3 mx-auto item">
+                        <div className="content mx-auto">
+                            <img className='imgPerson' src="./img/model.jpg" alt="..." />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-3 mx-auto item pt-3 pt-sm-0">
                         <div className='content mx-auto'>
                             <img className='imgPerson' src="./img/model.jpg" alt="..." />
                             <div className='imgGlasses'>
@@ -43,15 +50,11 @@ export default class Body_RenderWidthMap extends Component {
                             </div>
                             <div className='title text-start'>
                                 <h3 className='text-primary mb-0'>{this.state.nameGlasses}</h3>
-                                <p className='text-white mb-0'>{}</p>
+                                <p className='text-white mb-0'>{this.state.descGlasses}</p>
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-sm-6 col-lg-3 mx-auto pt-3 pt-sm-0 item">
-                        <div className="content mx-auto">
-                            <img className='imgPerson' src="./img/model.jpg" alt="..." />
-                        </div>
-                    </div>
+
                 </div>
 
                 <div className='text-center mt-5 btnGlasses'>
