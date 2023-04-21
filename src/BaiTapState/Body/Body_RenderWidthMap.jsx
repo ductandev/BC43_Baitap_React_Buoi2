@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { arrProduct } from '../assets/data/data'
+import { arrProduct } from '../../assets/data/data'
 
-export default class Body_RenderWidthMap extends Component {
+
+export default class Body_State_Props extends Component {
 
 
     state = {
@@ -18,7 +19,7 @@ export default class Body_RenderWidthMap extends Component {
         })
     }
 
-    renderMapBtn = () => {
+    renderWidthMapBtn = () => {
         let arrJSXBtn = arrProduct.map((item) => {
             return <div className="col-6 col-md-4 col-lg-3 col-xl-2 pt-2" key={item.id}>
                 <button onClick={() => {
@@ -29,7 +30,7 @@ export default class Body_RenderWidthMap extends Component {
             </div>
         })
 
-        return arrJSXBtn
+        return arrJSXBtn;
     }
 
 
@@ -59,7 +60,7 @@ export default class Body_RenderWidthMap extends Component {
 
                 <div className='text-center mt-5 btnGlasses'>
                     <div className='row bg-light p-4'>
-                        {this.renderMapBtn()}
+                        {this.renderWidthMapBtn()}
                     </div>
                 </div>
 
